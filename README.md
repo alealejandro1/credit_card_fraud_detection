@@ -1,0 +1,5 @@
+This is a breakdown of a credit card fraud analysis. Besides the preprocessing and the classification, is important to realise that we are to be optimising for recall. As this data is extremely unbalanced ( ~0.1% of all transactions are fraudulent) considerations are taken in dealing with this. In this approach, I chose to sub-sample to a near 50/50 split of both classes (fraudulent and non-fraudulent). 
+
+This approach is described by Bachmann in https://www.kaggle.com/janiobachmann/credit-fraud-dealing-with-imbalanced-datasets/notebook, however I made some tweaks and changes. One of the main one is not fit_transforming on the whole dataset, as that carries "test" data that should not be available. Other minor tweaks are considered too.
+
+Finally, we see that dropping outliers helps in the score (recall, accuracy), but should be use sparingly as the final dataset is small (< 1k).
